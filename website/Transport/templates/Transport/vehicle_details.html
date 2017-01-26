@@ -1,0 +1,44 @@
+{% extends 'Transport/base_visitor1.html' %}
+{% block title %}Booking{% endblock %}
+{% block login_active %}active{% endblock %}
+{% block body %}
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+}
+td, th {
+    border: 10px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type of vehicle</th>
+    <th>Number</th>
+    <th>Location</th>
+  </tr>
+{% for answer_list in vehi %}
+<tr>
+  <td>{{ answer_list.vehicle_name }}</td>
+  <td>{{ answer_list.vehicle_type }}</td>
+  <td>{{ answer_list.vehicle_reg_num }}</td>
+  <form action="{% url 'Transport:place' %}">
+  <td><div class="form-group">
+  <button type="submit" class="btn btn-success">Details</button>
+</div></td>
+</form>
+<br>
+</tr>
+{% endfor %}
+</table>
+{%endblock%}
