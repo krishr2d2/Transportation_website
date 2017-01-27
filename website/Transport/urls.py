@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^logout_user/$', views.logout_user, name='logout_user'),
     url(r'^Booking/$',views.Booking,name="Booking"),
     url(r'^vehicle_details/$',views.vehicle_details,name="vehicle_details"),
-    url(r'^vehicle_details/place/$',views.place,name="place"),
+    url(r'^vehicle_details/(?P<name>IIITS-[1-6])/$',views.place,name="place"),
 ]
