@@ -3,7 +3,10 @@
 {% block login_active %}active{% endblock %}
 {% block body %}
 <head>
+  {% load staticfiles %}
+  <script src="{% static 'Transport/js/1.js' %}"></script>
 <style>
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -18,7 +21,9 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
 </style>
+
 </head>
 <table>
   <tr>
@@ -32,11 +37,38 @@ tr:nth-child(even) {
   <td>{{ answer_list.vehicle_name }}</td>
   <td>{{ answer_list.vehicle_type }}</td>
   <td>{{ answer_list.vehicle_reg_num }}</td>
-  <form action="{% url 'Transport:place' %}">
-  <td><div class="form-group">
-  <button type="submit" class="btn btn-success">Details</button>
-</div></td>
-</form>
+
+  <td>
+    {% if answer_list.vehicle_name == "IIITS-1" %}
+    <div  class="myClass">
+  <button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-2" %}
+<div  class="myClass1">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-3" %}
+<div  class="myClass2">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-4" %}
+<div  class="myClass3">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-5" %}
+<div  class="myClass4">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+</td>
 <br>
 </tr>
 {% endfor %}

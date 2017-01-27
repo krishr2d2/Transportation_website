@@ -16,8 +16,13 @@ def index(request):
            return render(request,'Transport/index.html')
 
 
-def place(request):
-    return render(request,"Transport/place.html")
+def place(request,name):
+    temp_veh = vehicle.objects.get(vehicle_name=name)
+    temp_veh_liv = vehicle_live.objects.get(vehicle = temp_veh)
+    a = {
+    "temp_veh_liv":temp_veh_liv,
+    }
+    return render(request,"Transport/place.html",a)
 
 def vehicle_details(request):
     vehi = vehicle.objects.all()
