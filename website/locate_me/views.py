@@ -12,6 +12,7 @@ def index(request,vehi,lat,lon):
             temp_veh_liv.vehicle = temp_veh
             temp_veh_liv.lon_pos = lon
             temp_veh_liv.lat_pos = lat
+            temp_veh_liv.save() 
 '''<<<<<<< HEAD
             temp_veh_liv.save() 
 =======
