@@ -12,9 +12,17 @@ def index(request,vehi,lat,lon):
             temp_veh_liv.vehicle = temp_veh
             temp_veh_liv.lon_pos = lon
             temp_veh_liv.lat_pos = lat
+<<<<<<< HEAD
 
             temp_veh_liv.save() 
             #temp_veh_liv.save()
+=======
+'''<<<<<<< HEAD
+            temp_veh_liv.save() 
+=======
+            temp_veh_liv.save()
+>>>>>>> 08ddfa41bd0f481d78b38b3ec1b5d82d1fa72492'''
+>>>>>>> fixed a bug in views by commenting
 
             return HttpResponse("<h3>"+vehi+" @</br>lat: "+lat+"</br>lon: "+lon+"</h3>")
         except:
