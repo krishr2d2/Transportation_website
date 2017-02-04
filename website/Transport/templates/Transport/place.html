@@ -45,5 +45,8 @@ function showError(error) {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<form action="{% url 'Transport:vehicle_details'%}">
+<button type="submit" class="btn btn-success">Back</button>
+</form>
 </body>
 {%endblock%}

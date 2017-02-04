@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Transporation{% endblock %}</title>
+    <title>{% block title %}IIITS-Transports{% endblock %}</title>
     {% load staticfiles %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -25,11 +25,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{% url 'Transport:index' %}">Transportation</a>
-        </div>
+	</div>
 
         <!-- Items -->
-        <div class="collapse navbar-collapse" id="topNavBar">
-            <ul class="nav navbar-nav">
+	<div class="collapse navbar-collapse" id="topNavBar">
+		<!--<ul class="nav navbar-nav">-->
+		<ul class="nav navbar-nav nav-bar-left">
                 <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'Transport:Booking' %}"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span>&nbsp; Booking</a></li>
                 <li><a href="{% url 'Transport:vehicle_details' %}"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span>&nbsp; vehicle_details</a></li>
 
