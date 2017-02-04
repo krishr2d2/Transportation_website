@@ -5,14 +5,11 @@ from datetime import datetime
 #from geoposition.fields import GeopositionField
 
 # Create your models here.
-class Statelist(models.Model):  
-    status_name = models.CharField(max_length=10)
 
 class Booking(models.Model):
-    startpoint = models.CharField(max_length=250)
-    destination = models.CharField(max_length=200)
-    date=models.DateTimeField('date of booking')
-    status=models.ForeignKey(Statelist,on_delete=models.CASCADE)
+	startpoint = models.CharField(max_length=250)
+	destination = models.CharField(max_length=200)
+	date=models.DateTimeField('date of booking')
 
 class vehicle(models.Model):
         vehicle_name = models.CharField(max_length=200)
