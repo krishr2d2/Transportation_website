@@ -2,8 +2,3 @@
 Our ITS project website 
 test
 
-d
-p
-
-changed in master
- w
