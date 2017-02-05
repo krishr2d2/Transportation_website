@@ -30,6 +30,7 @@ class HomePageTest(TestCase):
         self.assertEqual(login2,None)
 
     def test_incorrect_password(self):
+        user3 = authenticate(username='testy',password='hello')
         login3 = self.c.login(username='testy',password='hell')
         # login3 == False implies the user's credentials are invalid...
-        self.assertEqual(login3,False)
+        self.assertTrue(not login3 and user3 != None)
