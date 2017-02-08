@@ -10,6 +10,8 @@ class Booking(models.Model):
 	startpoint = models.CharField(max_length=250)
 	destination = models.CharField(max_length=200)
 	date=models.DateTimeField('date of booking')
+    status=models.IntegerField(default=0)#0 is default,1
+
 
 class vehicle(models.Model):
         vehicle_name = models.CharField(max_length=200)
