@@ -10,13 +10,16 @@ class Booking(models.Model):
 	startpoint = models.CharField(max_length=250)
 	destination = models.CharField(max_length=200)
 	date=models.DateTimeField('date of booking')
-    status=models.IntegerField(default=0)#0 is default,1
+    status=models.IntegerField(default=0)
+    #0 is default,1 for accepting,2 for complete,4 for payment,5 for canceled.
 
 
 class vehicle(models.Model):
         vehicle_name = models.CharField(max_length=200)
         vehicle_reg_num = models.CharField(max_length=200)
         vehicle_type = models.CharField(max_length=200)
+        status=models.IntegerField(default=0)
+        #0 for available,1 for not available
         #def __str__(self):
         def __unicode__(self):
             return '---'+self.vehicle_name
