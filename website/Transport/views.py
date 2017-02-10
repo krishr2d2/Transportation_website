@@ -16,9 +16,15 @@ def index(request):
            return render(request,'Transport/index.html')
 
 
-def place(request,name):
-    temp_veh = vehicle.objects.get(vehicle_name=name)
+def place(request,name_id):
+    temp_veh = driver.objects.get(id=name_id)
     temp_veh_liv = vehicle_live.objects.get(vehicle = temp_veh)
+    #if (temp_veh_liv == None):
+    #    temp_veh_liv = vehicle_live()
+    #    temp_veh_liv.vehicle = temp_veh
+    #    temp_veh_liv.lon_pos = 80.0091568
+    #    temp_veh_liv.lat_pos = 13.5481095
+    #    temp_veh.save()
     a = {
     "temp_veh_liv":temp_veh_liv,
     }
@@ -82,3 +88,20 @@ def register(request):
         "form": form,
     }
     return render(request, 'Transport/register.html', context)
+
+def user_accounts(request):
+    temp_user_acc = My_user.objects.all()
+    usr_cont = {
+     "my_usr":temp_user_acc,
+     }
+    return render(request,"Transport/usr_acc.html",usr_cont)
+
+def driver_accounts(request):
+    temp_driver_acc = driver.objects.all()
+    num_records = range(1,temp_driver_acc.count()+1)
+    print num_records
+    driver_cont = {
+    "my_driv":temp_driver_acc,
+    "total" : num_records
+    }
+    return render(request, "Transport/driv_acc.html",driver_cont)

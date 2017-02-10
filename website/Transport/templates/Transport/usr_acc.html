@@ -1,0 +1,78 @@
+{% extends 'Transport/base_visitor1.html' %}
+{% block title %}Booking{% endblock %}
+{% block login_active %}active{% endblock %}
+{% block body %}
+<head>
+  {% load staticfiles %}
+<!--  <script src="{% static 'Transport/js/1.js' %}"></script>-->
+<style>
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+}
+td, th {
+    border: 10px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+</style>
+
+</head>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone No.</th>
+    <th>Email</th>
+    <th>Gender</th>
+  </tr>
+{% for answer_list in my_usr %}
+<tr>
+  <td>{{ answer_list.user_name }}</td>
+  <td>{{ answer_list.user_addr }}</td>
+  <td>{{ answer_list.user_phone }}</td>
+  <td>{{ answer_list.user_email }}</td>
+  <td>{{ answer_list.gender }}</td>
+<!--    {% if answer_list.vehicle_name == "IIITS-1" %}
+    <div  class="myClass">
+  <button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-2" %}
+<div  class="myClass1">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-3" %}
+<div  class="myClass2">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-4" %}
+<div  class="myClass3">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+
+{% if answer_list.vehicle_name == "IIITS-5" %}
+<div  class="myClass4">
+<button type="submit" class="btn btn-success"> Details</button>
+</div>
+{%endif%}
+</td>
+<br>
+-->
+</tr>
+{% endfor %}
+</table>
+{%endblock%}

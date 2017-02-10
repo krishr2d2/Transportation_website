@@ -1,32 +1,18 @@
-var id=0;
-
 $(function(){
+  //  for (id=1;id<=3;id++) {
     $(".myClass").click(function(){
-        id++;
-        location.href = "IIITS-1/";
+        location.href = this.id+"/";
+        });
     });
-});
-$(function(){
-    $(".myClass1").click(function(){
-        id++;
-        location.href = "IIITS-2/";
-    });
-});
-$(function(){
-    $(".myClass2").click(function(){
-        id++;
-        location.href = "IIITS-3/";
-    });
-});
-$(function(){
-    $(".myClass3").click(function(){
-        id++;
-        location.href = "IIITS-4/";
-    });
-});
-$(function(){
-    $(".myClass4").click(function(){
-        id++;
-        location.href = "IIITS-5/";
-    });
-});
+//$(function(){
+   
+//});
+//$(function(){
+    
+//});
+//$(function(){
+    
+//});
+///$(function(){
+    
+//});
