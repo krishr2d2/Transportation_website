@@ -12,10 +12,7 @@ def index(request,vehi,lat,lon):
             temp_veh_liv.vehicle = temp_veh
             temp_veh_liv.lon_pos = lon
             temp_veh_liv.lat_pos = lat
-
             temp_veh_liv.save() 
-            #temp_veh_liv.save()
-
             return HttpResponse("<h3>"+vehi+" @</br>lat: "+lat+"</br>lon: "+lon+"</h3>")
         except:
             return HttpResponse("<h1>There are no records for your vehicle.</h1>")
