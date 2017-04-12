@@ -1,0 +1,104 @@
+{% extends 'Transport/base.html' %}
+
+<html lang="en">
+ {% load staticfiles %}
+    {%block content1%}
+
+    <style>
+      #map {
+        position: absolute;
+        overflow: hidden;
+        top: 6%;
+        height: 81%;
+        width: 79%;
+        left: 19%;
+        margin-top: 3%
+       }
+    </style>
+    <title>Dashboard</title>
+    {%endblock%}
+
+{%block mapcontent%} 
+    <script>
+      function initMap() {
+        // var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: {lat:13.549349,lng:79.9995459}
+        });
+
+        
+        {% for pass in riders %}
+        //{% ifnotequal pass None%}
+        var marker = new google.maps.Marker({
+          position: {lat: parseFloat({{pass.1.latitude}}), lng: parseFloat({{pass.1.longitude}}) },
+          map: map,
+          icon:'{% static 'Transport/images/map-icons/male-2.png'%}',
+          url:'/Transport/passenger_details/{{pass.0}}'
+        });
+        var content = '<b>{{pass.1.name}}</b><br>{{pass.1.email}}<br>{{pass.1.phone}}'
+        var infowindow = new google.maps.InfoWindow()
+    
+        google.maps.event.addListener(marker, 'click', function() {
+                 window.location.href = this.url;
+        });
+        google.maps.event.addListener(marker,'mouseover', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
+                google.maps.event.addListener(marker,'mouseout', (function(marker,content,infowindow){ 
+        return function() {
+           
+           infowindow.close();
+        };
+    })(marker,content,infowindow));
+        //{%endifnotequal%}
+        {%endfor%}
+
+
+        {% for vehs in drivs %}
+        var marker = new google.maps.Marker({
+          position: {lat: parseFloat({{vehs.latitude}}), lng:parseFloat({{vehs.longitude}})},
+          map: map,
+          icon:'{% static 'Transport/images/map-icons/car.png'%}',
+          url:'/Transport/vehicle_details/{{vehs.vehicle_name}}'
+        });
+        var content = '<b>{{vehs.vehicle_name}}</b><br>{{vehs.vehicle}}<br>{{vehs.Driver_name}}'
+        //{% for  driver in drivers%}
+        //{% ifequal driver.Driver_currentVehicle_id vehicle.id%}
+        //var content='<b>{{vehs.Driver_name}}</b><br>{{vehs.vehicle_name}}<br>{{vehs.vehicle}}'
+        //{%endifequal%}
+        //{%endfor%}
+
+        var infowindow = new google.maps.InfoWindow()
+    
+        google.maps.event.addListener(marker, 'click', function() {
+                 window.location.href = this.url;
+        });
+        google.maps.event.addListener(marker,'mouseover', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
+                google.maps.event.addListener(marker,'mouseout', (function(marker,content,infowindow){ 
+        return function() {
+           
+           infowindow.close();
+        };
+    })(marker,content,infowindow)); 
+        {%endfor%}
+      }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ15BbQwlN0XqfqqeNY6uWNkZt0KtbfP4&callback=initMap">
+    </script>
+    {%endblock%}
+    {%block mapid%}
+    <div id="map"> </div>
+    {%endblock%}
+
+</html>

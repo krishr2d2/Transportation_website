@@ -1,0 +1,18 @@
+{% extends 'Transport/base.html' %}
+ {% block content1%}<title>Update_Driver</title>{% endblock %}
+<!--  {% block login_active %}active{% endblock %} -->
+ {% block change %}
+<div class="col-sm-12 col-md-6">
+    <div class="panel panel-default" style="position:fixed;left:35%;top:13%;width:47%; background-color:#668D91;" >
+
+        <div class="panel-body" style="width:221%;top:110px;height:436px;left:34%;position:static;">
+            <h2 style="position: fixed; left: 40%;">Update Driver Information for {{name}}:<br><br></h2>
+            <form method="POST" class="post-form" style="position:fixed; right:12%; top: 34%; width: 41%;">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default" style="position: fixed; left: 47%; top: 67%;">Submit</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

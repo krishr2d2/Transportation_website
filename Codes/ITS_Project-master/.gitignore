@@ -1,0 +1,2 @@
+*.pyc
+*.log #not to commit log files

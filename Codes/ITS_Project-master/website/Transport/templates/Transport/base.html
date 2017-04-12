@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%block content1%}
+    {%endblock%}
+
+    {% load staticfiles %}<!--load static files-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+   <!--  <title>Transbook</title> -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'Transport/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'Transport/vendor/metisMenu/metisMenu.min.css'%}" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="{% static 'Transport/vendor/datatables-plugins/dataTables.bootstrap.css'%}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="{% static 'Transport/vendor/datatables-responsive/dataTables.responsive.css'%}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'Transport/dist/css/sb-admin-2.css'%}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'Transport/vendor/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+{%block mapcontent%}
+
+{%endblock%}
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;position :fixed; width: 100%;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Transport">TRANSBOOK</a>
+            </div>
+            <!-- /.navbar-header -->
+
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li><a href="{% url 'Transport:logout_user' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" style="position : fixed" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="/Transport"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Transport:allpassengers' %}"><i class="fa fa-street-view" aria-hidden="true"></i>
+ Passengers</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Transport:alldrivers' %}"><i class="fa fa-empire" aria-hidden="true"></i>
+Drivers</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Transport:allvehicles' %}"><i class="fa fa-car" aria-hidden="true"></i>
+ Vehicles</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Transport:aboutus' %}"><i class="fa fa-star" aria-hidden="true"></i>
+ About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <!-- <div class="col-lg-12"> -->
+                <!-- <div id="map"></div> -->
+                {%block mapid%}
+                {%endblock%}
+                {%block change%}
+                {%endblock%}
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!-- /.row -->
+
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+        
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+      <script src="{% static 'Transport/vendor/jquery/jquery.min.js'%}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'Transport/vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'Transport/vendor/metisMenu/metisMenu.min.js'%}"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{% static 'Transport/vendor/datatables/js/jquery.dataTables.min.js'%}"></script>
+    <script src="{% static 'Transport/vendor/datatables-plugins/dataTables.bootstrap.min.js'%}"></script>
+    <script src="{% static 'Transport/vendor/datatables-responsive/dataTables.responsive.js'%}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'Transport/dist/js/sb-admin-2.js'%}"></script>
+    <script src="{% static 'Transport/dist/js/map.js'%}"></script>
+    {%block drivertable%}
+    {%endblock%}
+</body>
+
+</html>

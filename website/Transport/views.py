@@ -10,10 +10,10 @@ from Transport.models import *
 from Transport.forms import *
 
 def index(request):
-     if not request.user.is_authenticated():
-           return render(request, 'Transport/login.html')
-     else:
-           return render(request,'Transport/index.html')
+     #if not request.user.is_authenticated():
+     #      return render(request, 'Transport/login.html')
+     #else:
+     return render(request,'Transport/index.html')
 
 
 def place(request,name_id):

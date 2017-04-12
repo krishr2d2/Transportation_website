@@ -1,0 +1,41 @@
+1487310374721	geckodriver	INFO	Listening on 127.0.0.1:59053
+1487310375782	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.caJRtP4sfZ0r
+1487310375783	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1487310375799	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34975
+
+(firefox:2453): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:2453): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+1487310383964 Marionette: Element does not have a correct accessibility role and may not be manipulated via the accessibility API -> id: id_password, tagName: INPUT, className: 
+JavaScript error: chrome://marionette/content/listener.js, line 1341: NS_ERROR_MALFORMED_URI: 
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+
+(firefox:2453): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:2453): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+1487310388653 Marionette: Element does not have an accessible object -> id: , tagName: BODY, className: 
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+JavaScript error: http://127.0.0.1:8000/Transport/driver_accounts/1/, line 91: ReferenceError: initialize is not defined
+
+(firefox:2453): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+1489041524827	geckodriver	INFO	Listening on 127.0.0.1:36397
+1489041525968	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.zYn3Opx6BAhU
+1489041525969	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1489041525984	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35209
+1489041742995	geckodriver	INFO	Listening on 127.0.0.1:36451
+1489041744124	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.Npp028alzddh
+1489041744124	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1489041744126	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35845

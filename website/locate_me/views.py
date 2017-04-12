@@ -1,20 +1,23 @@
 from django.shortcuts import HttpResponse
 from Transport.models import *
+from datetime import datetime
 
 def index(request,vehi,lat,lon):
     try:
         temp_veh = driver.objects.get(vehicle_reg_num=vehi)
         try:
             temp_veh_liv = vehicle_live.objects.get(vehicle = temp_veh)
-            temp_veh_liv.delete()
+            #temp_veh_liv.delete()
         except vehicle_live.DoesNotExist :
             temp_veh_liv = None
-
-        temp_veh_liv = vehicle_live()
-        temp_veh_liv.vehicle = temp_veh
-        temp_veh_liv.lon_pos = lon
-        temp_veh_liv.lat_pos = lat
-        temp_veh_liv.save()
+            print 'Invalid vehicle object...KC'
+        #temp_veh_liv = vehicle_live()
+        #temp_veh_liv.vehicle = temp_veh
+        if (lat != '1000' and lon != '1000'):
+            temp_veh_liv.lon_pos = lon
+            temp_veh_liv.lat_pos = lat
+            temp_veh_liv.time_stamp = datetime.now()
+            temp_veh_liv.save()
 
         #temp_veh_liv = vehicle_live()
         #temp_veh_liv.vehicle = temp_veh

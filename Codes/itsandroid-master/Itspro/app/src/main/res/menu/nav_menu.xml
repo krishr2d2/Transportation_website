@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/booking"
+        android:icon="@mipmap/ic_local_taxi_black_24dp"
+        android:title="Booking" />
+    <item android:id="@+id/track"
+        android:icon="@mipmap/ic_track_changes_black_24dp"
+        android:title="Track Your Ride"/>
+    <item android:id="@+id/history"
+        android:icon="@mipmap/ic_history_black_24dp"
+        android:title="History"/>
+    <item android:id="@+id/feedback"
+        android:icon="@mipmap/ic_feedback_black_24dp"
+        android:title="Feedback"/>
+    <item android:id="@+id/about"
+        android:icon="@mipmap/ic_info_black_24dp"
+        android:title="ABout"/>
+</menu>

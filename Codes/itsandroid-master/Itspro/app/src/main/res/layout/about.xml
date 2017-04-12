@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/userabout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.its.itspro.ridermain"
+    android:background="#acbdef"
+    android:weightSum="5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.60"
+        android:fontFamily="monospace"
+        android:includeFontPadding="true"
+        android:text="about"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#921933"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.98"
+        android:text=" Developers  group 11 @ ITS"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ba874a"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.23"
+        android:fontFamily="monospace"
+        android:text="Version 1.0"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_weight="2.04"
+        android:text="Email: thetransportsector@gmail.com"
+        android:textAlignment="center"
+        android:textColor="#98136454"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_weight="1.37"
+        android:text="By Sai Krishna Maurya"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#098429"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

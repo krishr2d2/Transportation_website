@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Me-Transport</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_mpas">Map</string>
+    <string name="title_activity_dummy1">dummy1</string>
+    <string name="title_activity_main_activitymm">MainActivitymm</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_drivernext">drivernext</string>
+</resources>

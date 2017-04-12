@@ -1,0 +1,48 @@
+{% extends 'Transport/base_visitor1.html' %}
+{% block title %}Booking{% endblock %}
+{% block login_active %}active{% endblock %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+  <h1>All vehicles</h1>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var positions=[];
+        {% for details in active_vehicles %}
+        positions.push([{{details.vehicle_latitude}},{{details.vehicle_longitude}},{{details.id}},]);
+        {% endfor %}
+        var uluru = new google.maps.LatLng(positions[0][0], positions[0][1]);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker;
+        for( var i = 0; i < positions.length; i++ ) {
+          var positioned = new google.maps.LatLng(positions[i][0], positions[i][1]);
+          marker = new google.maps.Marker({
+            position: positioned,
+            map: map,
+            url:"{% url 'Transport:driver_accounts' %}"+positions[i][2]+"/"
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            window.location.href = this.url;
+          });
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ15BbQwlN0XqfqqeNY6uWNkZt0KtbfP4&callback=initMap">
+    </script>
+  </body>
+</html>
+{%endblock%}

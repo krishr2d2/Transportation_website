@@ -64,7 +64,8 @@ class vehicle_live(models.Model):
     vehicle = models.ForeignKey(driver, on_delete=models.CASCADE)
     lon_pos = models.FloatField()
     lat_pos = models.FloatField()
-    time_stamp = models.DateTimeField(default=datetime.now,blank=True)
+    #time_stamp = models.DateTimeField(default=datetime.now,blank=True)
+    time_stamp = models.DateTimeField(blank=True)
     #def __str __(self):
     def __unicode__(self):
         return "{0}--@--{1}".format(self.vehicle.driver_name,self.time_stamp)

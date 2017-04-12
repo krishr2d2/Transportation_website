@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "338235339102",
+    "firebase_url": "https://itsystems-162415.firebaseio.com",
+    "project_id": "itsystems-162415",
+    "storage_bucket": "itsystems-162415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338235339102:android:ada159ae5819a526",
+        "android_client_info": {
+          "package_name": "com.its.itspro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338235339102-660504mkjb7rtg6ki4j7i185nau3612e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQHHnCqr-3FajALfmpg19PS44fsB6XkBA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

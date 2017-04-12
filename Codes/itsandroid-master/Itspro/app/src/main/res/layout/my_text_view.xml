@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/colorPrimaryDark"
+    card_view:cardBackgroundColor="#abcdef"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="8dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="4dp"
+                android:fontFamily="@string/wallet_buy_button_place_holder"
+                android:text="from: "
+                android:textAllCaps="true"
+                android:textColor="#001256"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/bookingfrom"
+                android:textAllCaps="true"
+                android:textColor="#fffafb"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:fontFamily="@string/wallet_buy_button_place_holder"
+                android:text="to: "
+                android:textAllCaps="true"
+                android:textColor="#001256"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/bookingto"
+                android:textAllCaps="true"
+                android:textColor="#fffafb"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="status: pending"
+            android:textSize="20sp"
+            android:textColor="#ffff00"
+            android:textAllCaps="true"
+            android:id="@+id/stat"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
